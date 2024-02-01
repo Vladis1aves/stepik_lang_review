@@ -9,7 +9,7 @@ def pytest_addoption(parser):
     parser.addoption('--browser_name', action='store', default="chrome",
                      help="Choose browser: chrome or firefox")
     parser.addoption('--language', action='store', default=None,
-                     help="Choose language: es, fr")
+                     help="Choose language: es, fr, en")
 
 
 @pytest.fixture()
@@ -21,10 +21,12 @@ def browser(request):
     language = request.config.getoption("language")
     if language == "es":
         language = "es"
+    elif language == "en":
+        language = "en"
     elif language == "fr":
         language = "fr"
     else:
-        raise pytest.UsageError("--language 'es' or 'fr'")
+        raise pytest.UsageError("--language 'es' or 'fr' or 'en'")
     # Вызываем метод созданного объекта и передаем значение языка
     options_chrome.add_experimental_option('prefs', {'intl.accept_languages': language})
     options_firefox.set_preference("intl.accept_languages", language)
