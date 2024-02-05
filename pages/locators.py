@@ -14,3 +14,6 @@ class ItemPageLocators:
    basket_form = (By.CSS_SELECTOR, '#add_to_basket_form')
    item_title = (By.CSS_SELECTOR, 'div[class*="product_main"] h1')
    button_basket = (By.CSS_SELECTOR, '#add_to_basket_form button[type="submit"]')
+   price_incl_tax = (By.CSS_SELECTOR, "div table tbody tr:nth-child(4) td")
+   basket_total = (By.CSS_SELECTOR, 'div.basket-mini.pull-right.hidden-xs')
+   title_product_in_basket = (By.CSS_SELECTOR, 'div#messages div:nth-child(1) div strong')

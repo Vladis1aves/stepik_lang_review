@@ -8,7 +8,7 @@ from selenium.webdriver.firefox.options import Options as OptionsFirefox
 def pytest_addoption(parser):
     parser.addoption('--browser_name', action='store', default="chrome",
                      help="Choose browser: chrome or firefox")
-    parser.addoption('--language', action='store', default=None,
+    parser.addoption('--language', action='store', default="en",
                      help="Choose language: es, fr, en")
 
 
@@ -22,7 +22,7 @@ def browser(request):
     if language == "es":
         language = "es"
     elif language == "en":
-        language = "en"
+        language = "en-gb"
     elif language == "fr":
         language = "fr"
     else:
