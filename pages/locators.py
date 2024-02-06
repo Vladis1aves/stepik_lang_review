@@ -19,6 +19,14 @@ class ItemPageLocators:
    title_product_in_basket = (By.CSS_SELECTOR, 'div#messages div:nth-child(1) div strong')
 
 
-class BasePageLocators():
+class BasePageLocators:
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+    basket_button = (By.CSS_SELECTOR, "div.basket-mini.pull-right.hidden-xs a.btn.btn-default")
+
+
+class BasketPageLocators:
+    empty_basket = (By.CSS_SELECTOR, "div.content div#content_inner p")
+    basket_items_to_buy_now = (By.CSS_SELECTOR, "div.content div#content_inner div.basket-title.hidden-xs")
+
+
