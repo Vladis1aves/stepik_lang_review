@@ -17,3 +17,8 @@ class ItemPageLocators:
    price_incl_tax = (By.CSS_SELECTOR, "div table tbody tr:nth-child(4) td")
    basket_total = (By.CSS_SELECTOR, 'div.basket-mini.pull-right.hidden-xs')
    title_product_in_basket = (By.CSS_SELECTOR, 'div#messages div:nth-child(1) div strong')
+
+
+class BasePageLocators():
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")

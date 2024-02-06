@@ -3,7 +3,7 @@ from .locators import ItemPageLocators
 import time
 
 
-class ItemPage(BasePage):
+class ProductPage(BasePage):
     def should_be_product_page(self):
         self.should_be_product_url()
         self.should_be_basket_button()
@@ -39,3 +39,9 @@ class ItemPage(BasePage):
         name_product = self.find(*ItemPageLocators.item_title).text
         name_product_in_basket = str(self.find(*ItemPageLocators.title_product_in_basket).text)
         assert name_product == name_product_in_basket, "Name is not equivalently"
+
+    def not_should_be_alert(self):
+        assert self.is_not_element_present(*ItemPageLocators.title_product_in_basket), "Alert is success"
+
+    def element_is_not_disappeared(self):
+        assert self.is_disappeared(*ItemPageLocators.title_product_in_basket), "Element is Disappeared"
