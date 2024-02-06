@@ -36,7 +36,6 @@ def test_guest_cant_see_success_message_after_adding_product_to_basket(browser):
     time.sleep(2)
 
 
-@pytest.mark.skip
 def test_guest_cant_see_success_message(browser):
     LINK = f"https://selenium1py.pythonanywhere.com/en-gb/catalogue/coders-at-work_207/?promo=offer0"
     item_page = ProductPage(browser, LINK)

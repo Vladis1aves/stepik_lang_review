@@ -8,6 +8,11 @@ class MainPageLocators:
 class LoginPageLocators:
     register_form = (By.CSS_SELECTOR, '#register_form')
     login_form = (By.CSS_SELECTOR, '#login_form')
+    registration_email_input = (By.CSS_SELECTOR, 'input[type="email"][name="registration-email"]')
+    registration_password_input = (By.CSS_SELECTOR, 'input[type="password"][name="registration-password1"]')
+    confirm_password_input = (By.CSS_SELECTOR, 'input[type="password"][name="registration-password2"]')
+    register_button = (By.CSS_SELECTOR, 'button[name="registration_submit"]')
+
 
 
 class ItemPageLocators:
@@ -23,10 +28,12 @@ class BasePageLocators:
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
     basket_button = (By.CSS_SELECTOR, "div.basket-mini.pull-right.hidden-xs a.btn.btn-default")
-
+    USER_ICON = (By.CSS_SELECTOR, ".icon-user")
 
 class BasketPageLocators:
     empty_basket = (By.CSS_SELECTOR, "div.content div#content_inner p")
     basket_items_to_buy_now = (By.CSS_SELECTOR, "div.content div#content_inner div.basket-title.hidden-xs")
+
+
 
 
