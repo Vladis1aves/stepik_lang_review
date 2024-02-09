@@ -2,7 +2,7 @@ from selenium.webdriver.common.by import By
 
 
 class MainPageLocators:
-    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    login_link = (By.CSS_SELECTOR, "#login_link")
 
 
 class LoginPageLocators:
@@ -12,7 +12,6 @@ class LoginPageLocators:
     registration_password_input = (By.CSS_SELECTOR, 'input[type="password"][name="registration-password1"]')
     confirm_password_input = (By.CSS_SELECTOR, 'input[type="password"][name="registration-password2"]')
     register_button = (By.CSS_SELECTOR, 'button[name="registration_submit"]')
-
 
 
 class ItemPageLocators:
@@ -25,10 +24,11 @@ class ItemPageLocators:
 
 
 class BasePageLocators:
-    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
-    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+    login_link = (By.CSS_SELECTOR, "#login_link")
+    login_link_invalid = (By.CSS_SELECTOR, "#login_link_inc")
     basket_button = (By.CSS_SELECTOR, "div.basket-mini.pull-right.hidden-xs a.btn.btn-default")
-    USER_ICON = (By.CSS_SELECTOR, ".icon-user")
+    user_icon = (By.CSS_SELECTOR, ".icon-user")
+
 
 class BasketPageLocators:
     empty_basket = (By.CSS_SELECTOR, "div.content div#content_inner p")

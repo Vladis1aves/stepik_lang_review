@@ -12,8 +12,8 @@ class ProductPage(BasePage):
     def should_be_message_success_add_to_basket(self):
         self.should_be_basket_clickbait()
         self.solve_quiz_and_get_code()
-        self. should_be_equivalently_total_and_product_price()
-        self. should_be_equivalently_name_product()
+        self.should_be_equivalently_total_and_product_price()
+        self.should_be_equivalently_name_product()
 
     def should_be_product_url(self):
         assert self.browser.current_url == self.url, f"Incorrect item url, factual {self.browser.current_url}, actual {self.url}"

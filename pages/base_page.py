@@ -15,14 +15,14 @@ class BasePage:
         self.browser.implicitly_wait(timeout)
 
     def go_to_login_page(self):
-        link = self.browser.find_element(*BasePageLocators.LOGIN_LINK)
+        link = self.browser.find_element(*BasePageLocators.login_link)
         link.click()
 
     def should_be_login_link(self):
-        assert self.is_element_present(*BasePageLocators.LOGIN_LINK), "Login link is not presented"
+        assert self.is_element_present(*BasePageLocators.login_link), "Login link is not presented"
 
     def should_be_authorized_user(self):
-        assert self.is_element_present(*BasePageLocators.USER_ICON), "User icon is not presented," \
+        assert self.is_element_present(*BasePageLocators.user_icon), "User icon is not presented," \
                                                                      " probably unauthorised user"
 
     def go_to_basket(self):

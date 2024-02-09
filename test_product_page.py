@@ -47,21 +47,20 @@ class TestUserAddToBasketFromProductPage:
         page.register_new_user(str(random.randrange(1, 100000))+"vladick@email.com", "123456789Qq")
         page.should_be_authorized_user()
 
-    def test_user_cant_see_success_message(self, browser):
-        LINK = f"https://selenium1py.pythonanywhere.com/en-gb/catalogue/coders-at-work_207/?promo=offer0"
-        item_page = ProductPage(browser, LINK)
-        item_page.open()
-        item_page.not_should_be_alert()
-
     def test_user_can_add_product_to_basket(self, browser):
         # language = "en-gb"
-        LINK = f"https://selenium1py.pythonanywhere.com/en-gb/catalogue/coders-at-work_207/?promo=offer0"
-        item_page = ProductPage(browser, LINK)
+        link = f"https://selenium1py.pythonanywhere.com/en-gb/catalogue/coders-at-work_207/?promo=offer0"
+        item_page = ProductPage(browser, link)
         item_page.open()
         item_page.should_be_product_page()
         item_page.should_be_message_success_add_to_basket()
 
 
+def test_user_cant_see_success_message(self, browser):
+    link = f"https://selenium1py.pythonanywhere.com/en-gb/catalogue/coders-at-work_207/?promo=offer0"
+    item_page = ProductPage(browser, link)
+    item_page.open()
+    item_page.not_should_be_alert()
 
 
 #
