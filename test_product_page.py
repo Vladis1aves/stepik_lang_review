@@ -56,7 +56,7 @@ class TestUserAddToBasketFromProductPage:
         item_page.should_be_message_success_add_to_basket()
 
 
-def test_user_cant_see_success_message(self, browser):
+def test_user_cant_see_success_message(browser):
     link = f"https://selenium1py.pythonanywhere.com/en-gb/catalogue/coders-at-work_207/?promo=offer0"
     item_page = ProductPage(browser, link)
     item_page.open()
